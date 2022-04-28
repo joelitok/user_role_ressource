@@ -1,0 +1,23 @@
+button{
+  height: 100%;
+  border-radius: 12px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  margin-left: 10px;
+}
+img{
+  width: 62px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px groove white;
+  border-top: none;border-bottom: none;
+}
+.close{
+  width: 52px;
+  height: 54px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3) inset;
+  border: 2px groove white;
+  border-left: none;border-right: none;
+}

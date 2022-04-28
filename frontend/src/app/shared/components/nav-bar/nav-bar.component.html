@@ -1,0 +1,21 @@
+<div class="bg-primary p-3 shadow">
+  <div class="row">
+    <div class="col-lg-4">
+        <span (click)="goTo()" class="h2 text-white" style="cursor: pointer;">Hardware Managers</span>
+    </div>
+    <div class="col-lg-6">
+      <button (click)="goTo()" class="btn btn-white">Home</button>
+      <button class="btn btn-white">List Hardware</button>
+      <button class="btn btn-white" *ngIf="role == 'admin'">New Hardware</button>
+      <button class="btn btn-white" *ngIf="role == 'admin'">Users List</button>
+    </div>
+    <div class="col-lg-2">
+      <img *ngIf="role == 'admin'" src="../../../../assets/avatar/admin.jpg" alt="" srcset="">
+      <img *ngIf="role == 'user'" src="../../../../assets/avatar/user.jpg" alt="" srcset="">
+      <span class="text-white h6 mx-2">{{username}}</span>
+      <button (click)="closeSession()" class="btn btn-danger close">
+        <span class="material-icons">power_settings_new</span>
+      </button>
+    </div>
+  </div>
+</div>

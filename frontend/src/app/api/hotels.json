@@ -1,0 +1,43 @@
+[
+  {
+    "hotelId": 1,
+    "hotelName": "Buea sweet life",
+    "hotelDescription": "Belle vue sur la mer",
+    "price": 195.50,
+    "imageUrl": "assets/chambres/junior.jpg",
+    "rating": 3
+  },
+  {
+    "hotelId": 2,
+    "hotelName": "The dreams hotel",
+    "hotelDescription": "Proche du stade japoma",
+    "price": 210.85,
+    "imageUrl": "assets/chambres/luxieuse.png",
+    "rating": 4
+  },
+  {
+    "hotelId": 3,
+    "hotelName": "Kribi sweet hotel",
+    "hotelDescription": "Belle vue sur la mer",
+    "price": 250.5,
+    "imageUrl": "assets/chambres/senior.jpg",
+    "rating": 5
+  },
+  {
+    "hotelId": 4,
+    "hotelName": "Crital Palace",
+    "hotelDescription": "Centre ville de douala",
+    "price": 200.0,
+    "imageUrl": "assets/chambres/standar.jpg",
+    "rating": 3.5
+  }
+  ,
+  {
+    "hotelId": 5,
+    "hotelName": "Nantsa love hotel",
+    "hotelDescription": "Belle vue sur les haute montagne de ouest",
+    "price": 150.25,
+    "imageUrl": "assets/chambres/simple.png",
+    "rating": 2.5
+  }
+]
