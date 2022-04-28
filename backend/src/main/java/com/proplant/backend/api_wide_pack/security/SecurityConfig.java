@@ -2,6 +2,7 @@ package com.proplant.backend.api_wide_pack.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -45,10 +46,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	//les routes specifiées
 
 	//ressource                                                                      
-	 http.authorizeRequests().antMatchers("/ressource/**").permitAll();
-	 /* http.authorizeRequests().antMatchers(HttpMethod.POST, "/ressource/**").hasAuthority("ADMIN");
+	 http.authorizeRequests().antMatchers(HttpMethod.GET,"/ressource/**").permitAll();
+	 http.authorizeRequests().antMatchers(HttpMethod.POST, "/ressource/**").hasAuthority("ADMIN");
 	 http.authorizeRequests().antMatchers(HttpMethod.DELETE, "/ressource/**").hasAuthority("ADMIN");
-	 http.authorizeRequests().antMatchers(HttpMethod.PUT, "/ressource/**").hasAuthority("ADMIN");*/
+	 http.authorizeRequests().antMatchers(HttpMethod.PUT, "/ressource/**").hasAuthority("ADMIN");
 	 
 	 //chech authenticated after
 	 http.authorizeRequests().anyRequest().authenticated();
