@@ -43,7 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 
     http.authorizeRequests().antMatchers("/login/**","/user/**").permitAll();
-	//les routes specifiées
+	http.authorizeRequests().antMatchers("/auth/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-resources/**", "/configuration/**").permitAll();
+	
 
 	//ressource                                                                      
 	 http.authorizeRequests().antMatchers(HttpMethod.GET,"/ressource/**").permitAll();
