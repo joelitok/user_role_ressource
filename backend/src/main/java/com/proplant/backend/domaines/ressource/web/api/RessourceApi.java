@@ -19,7 +19,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import java.util.List;
 
 import com.proplant.backend.api_wide_pack.error_handler.ApiErrorDto;
-import com.proplant.backend.domaines.ressource.entity.Ressource;
+import com.proplant.backend.domaines.ressource.repository.entity.Ressource;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceRequestDTO;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceResponseDTO;
 

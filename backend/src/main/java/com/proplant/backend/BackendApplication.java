@@ -2,11 +2,11 @@ package com.proplant.backend;
 
 import java.util.stream.Stream;
 
-import com.proplant.backend.domaines.account.entity.AppRole;
-import com.proplant.backend.domaines.account.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.entity.AppRole;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
 import com.proplant.backend.domaines.account.service.AccountService;
-import com.proplant.backend.domaines.ressource.dao.RessourceRepository;
-import com.proplant.backend.domaines.ressource.entity.Ressource;
+import com.proplant.backend.domaines.ressource.repository.dao.RessourceRepository;
+import com.proplant.backend.domaines.ressource.repository.entity.Ressource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -56,6 +56,7 @@ public class BackendApplication implements CommandLineRunner{
 	
 			ressourceRepository.findAll().forEach(t->{
 				System.out.println(t.getName());
+				
 			});
 		}
 	

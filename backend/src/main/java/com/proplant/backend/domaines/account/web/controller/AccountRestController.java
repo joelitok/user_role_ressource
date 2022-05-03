@@ -2,9 +2,9 @@ package com.proplant.backend.domaines.account.web.controller;
 
 import java.security.Principal;
 
-import com.proplant.backend.domaines.account.entity.AppUser;
-import com.proplant.backend.domaines.account.entity.Register;
 import com.proplant.backend.domaines.account.mappers.AccountMapper;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.entity.Register;
 import com.proplant.backend.domaines.account.service.AccountService;
 import com.proplant.backend.domaines.account.web.api.AccountApi;
 import com.proplant.backend.domaines.account.web.dto.UserResponseDTO;

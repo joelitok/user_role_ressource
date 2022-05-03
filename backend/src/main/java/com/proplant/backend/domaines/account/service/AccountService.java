@@ -1,7 +1,7 @@
 package com.proplant.backend.domaines.account.service;
 
-import com.proplant.backend.domaines.account.entity.AppRole;
-import com.proplant.backend.domaines.account.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.entity.AppRole;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
 
 public interface AccountService{
     public AppUser saveUser(AppUser user);

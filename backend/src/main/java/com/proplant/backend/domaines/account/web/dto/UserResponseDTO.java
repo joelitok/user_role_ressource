@@ -6,7 +6,7 @@ import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.proplant.backend.domaines.account.entity.AppRole;
+import com.proplant.backend.domaines.account.repository.entity.AppRole;
 
 import lombok.Data;
 

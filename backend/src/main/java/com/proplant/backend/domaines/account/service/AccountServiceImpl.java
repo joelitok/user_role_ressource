@@ -2,10 +2,10 @@ package com.proplant.backend.domaines.account.service;
 
 import javax.transaction.Transactional;
 
-import com.proplant.backend.domaines.account.dao.RoleRepository;
-import com.proplant.backend.domaines.account.dao.UserRepository;
-import com.proplant.backend.domaines.account.entity.AppRole;
-import com.proplant.backend.domaines.account.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.dao.RoleRepository;
+import com.proplant.backend.domaines.account.repository.dao.UserRepository;
+import com.proplant.backend.domaines.account.repository.entity.AppRole;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

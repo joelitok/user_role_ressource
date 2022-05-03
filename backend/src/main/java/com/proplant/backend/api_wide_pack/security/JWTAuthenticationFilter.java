@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.proplant.backend.domaines.account.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

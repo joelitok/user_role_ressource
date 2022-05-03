@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
-import com.proplant.backend.domaines.ressource.dao.RessourceRepository;
-import com.proplant.backend.domaines.ressource.entity.Ressource;
 import com.proplant.backend.domaines.ressource.mappers.RessourceMapper;
+import com.proplant.backend.domaines.ressource.repository.dao.RessourceRepository;
+import com.proplant.backend.domaines.ressource.repository.entity.Ressource;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceRequestDTO;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceResponseDTO;
 

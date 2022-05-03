@@ -1,7 +1,7 @@
 package com.proplant.backend.domaines.account.mappers;
 
-import com.proplant.backend.domaines.account.entity.AppRole;
-import com.proplant.backend.domaines.account.entity.AppUser;
+import com.proplant.backend.domaines.account.repository.entity.AppRole;
+import com.proplant.backend.domaines.account.repository.entity.AppUser;
 import com.proplant.backend.domaines.account.web.dto.RoleRequestDTO;
 import com.proplant.backend.domaines.account.web.dto.RoleResponseDTO;
 import com.proplant.backend.domaines.account.web.dto.UserRequestDTO;

@@ -13,7 +13,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import java.security.Principal;
 
 import com.proplant.backend.api_wide_pack.error_handler.ApiErrorDto;
-import com.proplant.backend.domaines.account.entity.Register;
+import com.proplant.backend.domaines.account.repository.entity.Register;
 import com.proplant.backend.domaines.account.web.dto.UserResponseDTO;
 
 import org.springframework.http.ResponseEntity;
