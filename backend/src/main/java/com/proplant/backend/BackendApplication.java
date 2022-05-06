@@ -49,7 +49,7 @@ public class BackendApplication implements CommandLineRunner{
 	   accountService.addRoleToUser("admin", "ADMIN");
 	   accountService.addRoleToUser("user", "USER");
 		   
-		  ressourceRepository.deleteAll();
+		  //ressourceRepository.deleteAll();
 		  Stream.of("Ressource 1","Ressource 2","Ressource 3").forEach(t->{
 			  ressourceRepository.save(new Ressource(null,t));
 		  }); 
