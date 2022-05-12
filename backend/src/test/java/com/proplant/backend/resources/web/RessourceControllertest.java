@@ -8,6 +8,11 @@ import com.proplant.backend.domaines.ressource.repository.entity.Ressource;
 import com.proplant.backend.domaines.ressource.service.RessourceService;
 import com.proplant.backend.utils.LoadDataDB;
 
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
+
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 /*
 import io.restassured.RestAssured;
@@ -26,8 +31,80 @@ import org.junit.runner.RunWith;
 import static org.hamcrest.Matchers.equalTo; */
 //@RunWith(SpringRunner.class)
 //@SpringBootTest(classes = BackendApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
+import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.response.ExtractableResponse;
+import io.restassured.response.Response;
+
+@SpringBootTest(
+  webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+  properties = {
+  "spring.security.user.name=admin",
+  "spring.security.user.password=1234",
+  "spring.security.user.roles=ADMIN"
+})
 public class RessourceControllertest {
- /*
+ 
+    @LocalServerPort
+    private Integer port;
+  
+    @Test
+    void shouldCreateBook() {
+  
+      ExtractableResponse<Response> response = RestAssured
+        .given()
+          .filter(new RequestLoggingFilter())
+          .auth().preemptive().basic("admin", "1234")
+          .contentType("application/json")
+          .body("{\"name\": \"programme Java\"}")
+        .when()
+          .post("http://localhost:" + port + "/ressource/new")
+        .then()
+          .statusCode(201)
+          .extract();
+  
+      RestAssured
+        .when()
+          .get(response.header("Location"))
+        .then()
+          .statusCode(200)
+          .body("id", Matchers.notNullValue())
+          .body("name", Matchers.equalTo("programme Java"));
+    }
+ 
+ 
+    @Test
+    public void shouldReturnSuccessfullyWhengetallRessource(){
+        RestAssured.baseURI="http://localhost:2022";
+        RestAssured.given().get("ressource/all").then().statusCode(200);
+        
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    /*
     @LocalServerPort
     private int port; 
 
@@ -135,4 +212,10 @@ public class RessourceControllertest {
            return payload; 
     }
  */   
+
+
+
+
+
+
 }
