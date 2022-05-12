@@ -9,7 +9,7 @@ import com.proplant.backend.domaines.ressource.service.RessourceService;
 import com.proplant.backend.utils.LoadDataDB;
 
 import org.springframework.test.context.junit4.SpringRunner;
-
+/*
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -23,11 +23,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
-import static org.hamcrest.Matchers.equalTo;
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = BackendApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+import static org.hamcrest.Matchers.equalTo; */
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = BackendApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class RessourceControllertest {
- 
+ /*
     @LocalServerPort
     private int port; 
 
@@ -134,5 +134,5 @@ public class RessourceControllertest {
            String payload = "{\r\n" + "  \"username\": \"admin\",\r\n" + "  \"password\": \"1234\"\r\n" + "}";
            return payload; 
     }
-    
+ */   
 }

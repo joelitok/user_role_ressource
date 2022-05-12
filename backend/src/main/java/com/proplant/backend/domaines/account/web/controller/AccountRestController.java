@@ -15,13 +15,14 @@ import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import ch.qos.logback.classic.Logger;
 import javassist.bytecode.stackmap.TypeData.ClassName;
 
 
-
- @RestController
+@RequestMapping("/user")
+@RestController
 public class AccountRestController implements AccountApi {
   private  Logger logger ; //= LoggerFactory.getLogger(UserResponseDTO.class);
 
