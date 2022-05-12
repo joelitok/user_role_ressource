@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class RessourceRequestDTO{
     
     private Long id;
-    private String Name;
+    private String name;
 
 }

@@ -68,7 +68,7 @@ public interface AccountApi {
             content = @Content(mediaType = APPLICATION_JSON_VALUE, schema = @Schema(implementation = ApiErrorDto.class))),
         @ApiResponse(responseCode = "404", description = "No content found",
             content = @Content(mediaType = APPLICATION_JSON_VALUE, schema = @Schema(implementation = ApiErrorDto.class)))})
-    @GetMapping(path = "/list/bYusername", produces = {APPLICATION_JSON_VALUE})
+    @GetMapping(value = "/list/bYusername", produces = {APPLICATION_JSON_VALUE})
     ResponseEntity<List<UserResponseDTO>> getAllUsers(@PathVariable String username);
 
     @Operation(summary = "Request to sort users by param")

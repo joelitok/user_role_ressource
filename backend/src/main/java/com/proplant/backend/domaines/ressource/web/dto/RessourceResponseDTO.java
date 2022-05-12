@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class RessourceResponseDTO {
     private Long id;
-    private String Name;  
+    private String name;  
 }

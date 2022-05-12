@@ -2,7 +2,6 @@ package com.proplant.backend.domaines.account.web.controller;
 
 import java.security.Principal;
 import java.util.List;
-import java.util.logging.LogManager;
 
 import com.proplant.backend.domaines.account.mappers.AccountMapper;
 import com.proplant.backend.domaines.account.repository.entity.AppUser;
@@ -11,20 +10,20 @@ import com.proplant.backend.domaines.account.service.AccountService;
 import com.proplant.backend.domaines.account.web.api.AccountApi;
 import com.proplant.backend.domaines.account.web.dto.UserResponseDTO;
 
-import org.hibernate.annotations.common.util.impl.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ch.qos.logback.classic.Logger;
-import javassist.bytecode.stackmap.TypeData.ClassName;
+
 
 
 @RequestMapping("/user")
 @RestController
 public class AccountRestController implements AccountApi {
-  private  Logger logger ; //= LoggerFactory.getLogger(UserResponseDTO.class);
+    Logger logger= LoggerFactory.getLogger(AccountRestController.class);
 
   @Autowired  
   private AccountService accountService;
@@ -56,7 +55,7 @@ public class AccountRestController implements AccountApi {
 
   @Override
   public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
-    logger.info("list all users");
+   logger.info("list all users");
     return null;
   }
 
@@ -68,7 +67,7 @@ public class AccountRestController implements AccountApi {
 
   @Override
   public ResponseEntity<List<UserResponseDTO>> getAllUsersSortByParam(String contextId, String dirdId) {
-    logger.info("sort users");
+   logger.info("sort users");
     return null;
   }
 

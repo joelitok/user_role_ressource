@@ -7,7 +7,7 @@ import com.proplant.backend.domaines.account.repository.dao.UserRepository;
 import com.proplant.backend.domaines.account.repository.entity.AppRole;
 import com.proplant.backend.domaines.account.repository.entity.AppUser;
 
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -18,13 +18,13 @@ import lombok.AllArgsConstructor;
 public class AccountServiceImpl implements AccountService{
     private UserRepository userRepository;
     private RoleRepository roleRepository;
-   // private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
     
 
     @Override
     public AppUser saveUser(AppUser user) {
-     //  String hashPW = bCryptPasswordEncoder.encode(user.getPassword());
-     //  user.setPassword(hashPW);
+       String hashPW = bCryptPasswordEncoder.encode(user.getPassword());
+       user.setPassword(hashPW);
         return userRepository.save(user);
     }
 

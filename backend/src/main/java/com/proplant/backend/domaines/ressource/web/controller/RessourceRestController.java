@@ -1,13 +1,14 @@
 package com.proplant.backend.domaines.ressource.web.controller;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import com.proplant.backend.domaines.ressource.service.RessourceService;
 import com.proplant.backend.domaines.ressource.web.api.RessourceApi;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceRequestDTO;
 import com.proplant.backend.domaines.ressource.web.dto.RessourceResponseDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ressource")
 @RestController
 public class RessourceRestController implements RessourceApi{
-    private  Logger logger ; //= LoggerFactory.getLogger(UserResponseDTO.class);
+     Logger logger = LoggerFactory.getLogger(RessourceRestController.class);
     @Autowired
     private RessourceService ressourceService;
 
@@ -27,7 +28,7 @@ public class RessourceRestController implements RessourceApi{
 
     @Override
     public ResponseEntity<List<RessourceResponseDTO>> listRessources() {
-        //logger.info("list all ressources");
+        logger.info("list all ressources");
         return ResponseEntity.ok(ressourceService.listRessources());
     }
 
